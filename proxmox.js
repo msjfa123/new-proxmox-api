@@ -10,6 +10,7 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+
 // proxmox.access.postTicket({
 //     "password": 123456,
 //     "username": "root@pam"
@@ -24,6 +25,7 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 // Successful clone
+
 // proxmox.qemu.clone(
 //   node="pve",
 //   vmid=9000,
@@ -41,3 +43,5 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 //       }
 //   }
 // )
+
+
