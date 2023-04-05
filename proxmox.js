@@ -13,6 +13,7 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+
 // Successful ticket
 
 // proxmox.access.postTicket({
@@ -55,7 +56,6 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
-
 // Successful configuration change
 
 proxmox.qemu.setConfig(
@@ -63,7 +63,7 @@ proxmox.qemu.setConfig(
   vmid=103,
   {
     "memory":2048,
-    "sockets":1,
+    "sockets":2,
     "cores":2
   },function (err, response) {
           if (err) throw err;
@@ -73,3 +73,5 @@ proxmox.qemu.setConfig(
           }
       }
 )
+
+
