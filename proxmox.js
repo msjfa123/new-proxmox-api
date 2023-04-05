@@ -11,6 +11,8 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+// Successful ticket
+
 // proxmox.access.postTicket({
 //     "password": 123456,
 //     "username": "root@pam"
@@ -43,5 +45,8 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 //       }
 //   }
 // )
+
+
+
 
 
