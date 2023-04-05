@@ -54,6 +54,10 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+
+
+// Successful configuration change
+
 proxmox.qemu.setConfig(
   node="pve",
   vmid=103,
