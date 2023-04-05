@@ -1,5 +1,7 @@
 proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
+
+
 // proxmox.getClusterStatus(function (err, response) {
 //     if (err) throw err;
 //     else {
@@ -26,17 +28,19 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+
+
 // Successful clone
 
 // proxmox.qemu.clone(
 //   node="pve",
 //   vmid=9000,
 //   {
-//   "newid":104,
+//   "newid":103,
 //   "node":"pve",
 //   "vmid":9000,
 //   "full":1,
-//   "name":"testing-by-api"
+//   "name":"jadid"
 // },function (err, response) {
 //       if (err) throw err;
 //       else {
@@ -50,3 +54,18 @@ proxmox = require("proxmox")('root@pam', '123456', '192.168.122.12');
 
 
 
+proxmox.qemu.setConfig(
+  node="pve",
+  vmid=103,
+  {
+    "memory":2048,
+    "sockets":1,
+    "cores":2
+  },function (err, response) {
+          if (err) throw err;
+          else {
+              data = JSON.parse(response);
+              console.log(data);
+          }
+      }
+)
